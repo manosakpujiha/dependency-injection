@@ -20,7 +20,7 @@ namespace MathApi.Controllers
         [HttpGet("add")]
         public IActionResult Add(double a, double b)
         {
-            var result = _calculatorService.Add(a, b);
+            var result = _calculatorService.Add(a, b); // Calling Add method from the service
             return Ok(result); // Return the result as an HTTP 200 response
         }
 
@@ -28,7 +28,7 @@ namespace MathApi.Controllers
         [HttpGet("subtract")]
         public IActionResult Subtract(double a, double b)
         {
-            var result = _calculatorService.Subtract(a, b);
+            var result = _calculatorService.Subtract(a, b); // Calling Subtract method from the service
             return Ok(result);
         }
 
@@ -36,7 +36,7 @@ namespace MathApi.Controllers
         [HttpGet("multiply")]
         public IActionResult Multiply(double a, double b)
         {
-            var result = _calculatorService.Multiply(a, b);
+            var result = _calculatorService.Multiply(a, b); // Calling Multiply method from the service
             return Ok(result);
         }
 
@@ -46,7 +46,7 @@ namespace MathApi.Controllers
         {
             try
             {
-                var result = _calculatorService.Divide(a, b);
+                var result = _calculatorService.Divide(a, b); // Calling Divide method from the service
                 return Ok(result);
             }
             catch (DivideByZeroException ex)
